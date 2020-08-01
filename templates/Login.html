@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <!-- bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,600" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="/static/css/Login.css">
+</head>
+
+<body>
+
+  <!-- Start header -->
+  <header id="header">
+    <div class=" px-4 py-3 ">
+         <a href="#" class="logo"> <img
+        src="https://2.bp.blogspot.com/-A3aCL6_CaRU/XN1BPYfeUNI/AAAAAAAAAm0/QCmNCzFQAGEds4lKlPHFB0bVXUv-OTD0wCLcBGAs/s1600/NYKS.jpg"
+        alt="logo" width="70px" height="45px"></a>
+    </div>
+
+    <!-- Primary Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light color-primary">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav m-auto cont-rubik ">
+          <a class="nav-item nav-link mx-4" href="/register">Register</a>
+          <a class="nav-item nav-link hvr-underline-from-center mx-4" href="/readme">Read Me</a>
+          <a class="nav-item nav-link hvr-underline-from-center mx-4" href="#">Report</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Primary Navigation -->
+
+  </header>
+  <!-- Header Ends -->
+
+<!-- Main Section Starts -->
+<main>
+
+    <div class="container">
+        <section id="formHolder">
+                <h5 class=" my-4 ">
+                    Voice Biometric Attendance System
+                </h5>
+                <!-- Form Box -->
+                <div class=" form">
+
+                    <!-- Login Form -->
+                    <div class="login form-peice ">
+                        <form class="login-form" action="#">
+
+                            <!-- <div class="row"> -->
+                                <div class="logincls">
+                                    <div class="wizard card-lik" style="position: relative;">
+
+                                        <form action="#">
+
+                                            <div class="wizard-headr">
+                                                <div class="row">
+                                                    <div class="col-sm-12 pt-2">
+                                                        <h4 class="mb-4">Sign in</h4>
+                                                    </div>
+
+                                                    <div class="col-sm-12">
+
+                                                        <div class="stps text-center">
+                                                            <div class="wizard-stp activ">
+                                                                <i class="fa fa-location-arrow"></i></div>
+                                                            <div class="wizard-stp"><i class="fa fa-microphone"
+                                                                    aria-hidden="true"></i> </div>
+                                                            <hr>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="wizard-bdy">
+
+                                                <div class="stp initl activ ">
+
+                                                    <!-- login step 1 code here -->
+                                                    <ul style="list-style-type:none; margin: none;" id="locationcard">
+
+                                                        <li id="locmethod">
+                                                            <h6 class="text-center">Please Select Your Location Method</h6>
+                                                            <div class="row  text-center" style=" margin: 40px 0px;">
+
+                                                                <div class="col-lg-4 col-sm-12 mt-2 center ">
+                                                                    
+                                                                    <div class="border hvr-grow" id="geo" >
+                                                                        <img class="img-fluid"
+                                                                        src="/static/img/gps.png" alt="" width="50px" height="50px">
+                                                                        <p>Geolocation</p>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="col-lg-4 col-sm-12 mt-2">
+                                                                        <h6> OR </h6>
+                                                                </div>
+
+                                                                <div class="col-lg-4 col-sm-12 center">
+                                                                    <div class="border hvr-grow" id="mcard" >
+                                                                        <img class="img-fluid"
+                                                                        src="/static/img/landline.png" width="50px" height="50px">
+                                                                        <p>Landline</p>
+                                                                    </div>
+                                                                   
+                                                                </div>
+
+                                                            </div>
+
+
+                                                        </li>
+                                                        <li style="display: none;" id="locani">
+                                                            <center>
+                                                                <div><img id="locaniimg" src="/static/img/loca1.gif"
+                                                                        style="width: 100px;" alt="" /></div>
+                                                            </center><br>
+                                                            <h5 id="loc-msg">Getting Your Location</h5>
+                                                            <h6 id="loc-per" style="color: crimson;">Please allow to the
+                                                                permission popup</h6>
+
+                                                        </li>
+
+                                                        <li style="display: none;">
+                                                            <h5 id="gps" class="alert alert-warning "></h5>
+                                                        </li>
+
+                                                        <li style="display: none;">
+                                                            <h5>You Selected Landline Method</h5>
+                                                            <br>
+                                                            <p>Call to <b> 07265-777777 </b></p>
+                                                            <p>Your Verification code is <b>23654</b></p>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+
+
+                                                <div class="stp">
+
+                                                    <!-- login step 3 code here -->
+                                                    <div class="form-group">
+                                                        <ul style="list-style-type:none; margin: none;">
+                                                            <li id="text">
+                                                                <h4>Recording Starting in</h4>
+
+                                                                <h2><b><span id="timer"></span></b></h2>
+
+                                                            </li>
+                                                            
+                                                            <li id="rec-ani" style="display: none;">
+                                                                <h6>Read the below number</h6>
+                                                                <mark><h5>{{ t }}</h5></mark>
+                                                                <blink><span
+                                                                        style="height: 15px;width: 15px;background-color: crimson;border-radius: 50%;display: inline-block;">
+                                                                    </span>
+                                                                    <h5 style="color: crimson; display: inline-block;">
+                                                                        Recording</h5>
+                                                                </blink>
+                                                                <br>
+                                                                <div id="aud"><img src="/static/img/audio.gif" alt=""
+                                                                        style="width: 250px; height: 70px;"></div>
+
+                                                            </li>
+                                                            <li style="display: none;" id="recog">
+                                                                <img src="/static/img/recog.gif" id="loganiimg" alt="" style="width: 100px; height: 100px;">
+                                                                <blink>
+                                                                    <h4 style="color: forestgreen;" id="bly">Recognizing Your Voice</h4>
+                                                                    
+                                                                </blink>
+                                                                <h6 id="loma" style="color: crimson;"></h6>
+                                                            </li>
+                                                            
+
+                                                        </ul>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                          
+                                            <div class="wizard-footer ">
+                                                <div class="row  float-right">
+                                                    <div class="col-xs-6 pull-right text-center ">
+                                                        <button id="wizard-nxt" type="button" class="btn btn-irv "
+                                                            onclick="Record_btn()" disabled> Next
+                                                        </button>
+
+                                                        <div class="col-xs-6 pull-right block-center">
+                                                            <a href="/dashboard"> <button id="wizard-sub" style="display:none"
+                                                                    type="button" on class="btn btn-irv" disabled>
+                                                                    Login
+                                                                </button></a>
+                                                        </div>
+                                                        <a href="#" class="problem">Report a Problem</a>
+                                                    </div>
+                                                </div>
+                                                   
+                                                    <div class="row ">
+                                                    <div class="CTA my-2 mx-4">
+                                                        <a href="/register" class="switch" id="im-new">I'm new here</a>
+                                                    </div>
+                                                  </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+
+                        </form>
+                    </div>
+                    <!-- End Login Form -->
+
+                </div>
+             <!-- Form Box -->
+
+        </section>
+    </div>
+
+</main>
+<!-- Main Section Ends -->
+    
+<!-- Footer Starts  -->
+   <footer class="mt-4">
+    <div class="color-primary py-4 ">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-3 col-12 offset-lg-2">
+                    <h6>About System </h6>
+                    <p class="py-2">Lorem ipsum dolor adipisicing elit. Ducimus quia minima repellendus quisquam animi 
+                        officiis loream ipsum explicabo. Dolore provident minima sunt tempore alias, commodi pariatur...<a href="/readme"> Read More</a>           </p>
+                </div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-3 col-12 py-2">
+                    <h6>Team </h6>
+                    <div class="d-flex flex-column flex-wrap text-dark " style="font-size: 12px;">
+                      <a href="https://www.linkedin.com/in/hriday-raj-700154148/    " > Hriday Raj</a>
+                      <a href="https://www.linkedin.com/in/mujahid-ahmed-sayyed-036450193/" >Mujahid Ahmed </a>
+                      <a href="https://www.linkedin.com/in/manjiree-kolte-8aa10116b/" >Manjiree Kolte</a>
+                      <a href="https://www.linkedin.com/in/devshri-pohare-052125173/" >Devshri Pohre</a>
+                      <a href="https://www.linkedin.com/in/abhishek-moharir-06b356170/" >Abhishek Moharir</a>
+                      <a href="https://www.linkedin.com/in/abhishek-d-688707118/" >Abhishek Daberao</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="color-secondary ">
+        <div class="container text-center text-white p-3">
+          <p>&copy; Copyright 2020, All rights reserved</p>
+        </div>
+    </div>
+   </footer>
+<!-- Footer Ends -->
+
+
+
+
+    <!-- Custom Js -->
+    <script src="/static/js/recorder.js"></script>
+    <script src="/static/js/login_process.js"></script>
+    <!-- FOnt Awesome -->
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- Bootstrap  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    <script src="/static/js/Login.js"></script>
+    <script src="/static/js/register.js"></script>
+
+
+
+
+</body>
+
+</html>
