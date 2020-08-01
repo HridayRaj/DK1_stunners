@@ -206,7 +206,7 @@ def re():
 @app.route('/dashboard')
 # this route is for dashboard but not in use and will be used in future
 def dashboard():
-   return render_template('menubar.html')
+   return render_template('dashboard.html')
     
 
         
