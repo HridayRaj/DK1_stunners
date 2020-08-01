@@ -1,27 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/details.css">
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light color-primary">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon "></span>
-            </button>
-            <div class="collapse navbar-collapse text-center" id="navbarNavAltMarkup">
-                <div class="navbar-nav m-auto cont-rubik ">
-                    <a class="nav-item nav-link mx-4" href="/">Login</a>
-                </div>
-            </div>
-        </nav>
+{% extends "layout.html" %}
+{% block body %}
+    <br>
     <div class="demo">
         <h2 class="text-center"> Voice Biometric Attendance System</h2>
     </div>
@@ -59,8 +38,9 @@
 
         </ul>
         </div>
-
+           
     </div>
 </body>
 
 </html>
+{% endblock %}
