@@ -1,1 +1,2 @@
 # DK1_stunners
+Cadence is a software specially developed for taking attendance through voice recognition. This web based software will work with GPS system/Geo-location system for its authenticity . It will work for all the officers working in Nehru Yuva Krida Sangathan at different districts and states. Candence provide user friendly and easy to understand platform to the user which will make the daily attendence system simple but efficient.
