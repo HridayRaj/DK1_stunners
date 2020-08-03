@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/static/css/dashboard.css">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="sidebar">
+      <div class="bg_shadow"></div>
+      <div class="sidebar_inner">
+        <div class="close m-2">
+          <i class="fas fa-times"></i>
+        </div>
+
+        <ul class="siderbar_menu mx-2 text-center ">
+
+          <!-- Profile Picture -->
+          <div class="profile-pic mt-3">
+            <img
+              src="https://i0.wp.com/365webresources.com/wp-content/uploads/2016/09/FREE-PROFILE-AVATARS.png?resize=502%2C494&ssl=1"
+              alt="" height="100" width="100">
+          </div>
+
+          <div>
+            <h5 class="text-white text-center mt-2"> Personal Info </h5>
+          </div>
+
+          <div class=" borderless">
+            <table class="table text-white text-left">
+              <tbody>
+                <tr>
+                  <th scope="row">Name:</th>
+                  <td>{{ name }} </td>
+                </tr>
+                <tr>
+                  <th scope="row">Email Id: </th>
+                  <td> {{ email }} </td>
+                </tr>
+                <tr>
+                  <th scope="row">Mobile: </th>
+                  <td> {{ mobile }} </td>
+                </tr>
+                <tr>
+                  <th scope="row">DOB </th>
+                  <td> {{ dob }} </td>
+                </tr>
+                <tr>
+                  <th scope="row">Address:</th>
+                  <td> {{ address }} </td>
+                </tr>
+                <tr>
+                  <th scope="row">State:</th>
+                  <td> {{ state }} </td>
+                </tr>
+                <tr>
+                  <th scope="row">City:</th>
+                  <td> {{ city }} </td>
+                </tr>
+                <tr>
+                  <th scope="row">Pin Code:</th>
+                  <td> {{ pincode }} </td>
+                </tr>
+                <tr>
+                  <th scope="row">Longi/Lati</th>
+                  <td>  {{ longitude }} <span> / {{ lattitude }}</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Delete User Button -->
+          <div class="Button-user text-center mt-2"> <a href='/userlogout'> Logout </a> </div>
+
+        </ul>
+
+      </div>
+    </div>
+    <div class="main_container">
+      <div class="navbar">
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo">
+          <img
+            src="https://2.bp.blogspot.com/-A3aCL6_CaRU/XN1BPYfeUNI/AAAAAAAAAm0/QCmNCzFQAGEds4lKlPHFB0bVXUv-OTD0wCLcBGAs/s1600/NYKS.jpg"
+            alt="logo" width="65" height="45"></a>
+        </div>
+      </div>
+      <div class="content m-3">
+        <h4> Voice Recognization Attendance System</h4>
+
+        <div class="row">
+          <!--  Attendance Pie Chart -->
+          <div class="col m-4 blocks p-2">
+            <h5 class="mx-3">
+              Attendance Pie chart
+            </h5>
+            <div class="m-3">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Attendance Status -->
+          <div class="col m-4 blocks p-2" >
+            <h5 class="mx-3">
+              Attendance Status
+            </h5>
+
+            <div class="my-4 mx-5 p-3" style="background-color: rgb(153, 221, 248);">
+              <div class="text-center">
+                  <h1> {{ present }} </h1>
+                  <h6> Present Days</h6>
+              </div>
+            </div>
+
+            <div class="my-4 mx-5 p-3" style="background-color: rgb(230, 179, 179)">
+              <div class="text-center">
+                  <h1>0 </h1>
+                  <h6> Absent Days</h6>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row">
+
+
+          <!-- Apply For leave -->
+          <div class="col m-4 blocks">
+            <table class="table mt-2">
+              <thead class="table-primary">
+                <tr>
+                  <th scope="col"> Apply For Leave </th>
+                </tr>
+              </thead>
+            </table>
+            <!-- Apply Button -->
+            <div class="Button-apply text-center m-2" data-toggle="modal" data-target="#myModal"> <a link='#'> Click
+                Here </a> </div>
+          </div>
+
+          <!-- Applicaton Pending -->
+          <div class="col m-4 blocks">
+            <table class="table mt-2">
+              <thead class="table-warning">
+                <tr>
+                  <th scope="col"> Application Pending</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> No messages </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Application Approved -->
+          <div class="col m-4 blocks">
+            <table class="table mt-2">
+              <thead class="table-success">
+                <tr>
+                  <th scope="col"> Application Approved</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> No messages </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title"> Leave Application</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+
+                <div class="row">
+                  <div class="col-3 m-2">
+                    <b> Email: </b>
+                  </div>
+                  <div class="col-4 m-2">
+                    <input type="text">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-3 m-2">
+                    <b>Leave Type:</b> 
+                  </div>
+                  <div class="col-4 m-2">
+                    <input type="text">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-3 m-2">
+                   <b>  Start Day:</b>
+                  </div> 
+                  <div class="col-4 m-2">
+                    <input type="date">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-3 m-2">
+                    <b>  End Day:</b>
+                  </div>
+                  <div class="col-4 m-2">
+                    <input type="date">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-3 m-2">
+                   <b> reason: </b>
+                  </div>
+                  <div class="col-4 m-2">
+                    <input type="text">
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Send</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- Pie Chart  -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <!-- Font Awesome Link -->
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <!-- Custom Js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="/static/js/dashboard.js"></script>
+
+</body>
+
+</html>
+
+<!-- 
+
+
+
+
+
+  Leave Application 
+  <div class="col m-4" style="box-shadow: 0px 0px 10px gray;">
+    <h6 class="mx-3">
+     Leave Application
+    </h6>
+
+    
+    <div class="row">
+      <div class="col">
+        Name:
+      </div>
+      <div class="col">
+        Enter Your Name
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        Name:
+      </div>
+      <div class="col">
+        Enter Your Name
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        Start Day:
+      </div>
+      <div class="col">
+        Enter Your Name
+      </div>
+      <div class="col">
+        End Day:
+      </div>
+      <div class="col">
+        Enter Your Name
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        Name:
+      </div>
+      <div class="col">
+        Enter Your Name
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
