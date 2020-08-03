@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- bootstrap CDN  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- custom css -->
+    <link rel="stylesheet" href="input_fields.css">
+    <link rel="stylesheet" href="/static/css/admin.css">
+    <link rel="stylesheet" href="/static/css/admin2.css">
+</head>
+
+<body>
+    <!-- Main Section  -->
+    <div class="section">
+        <form action="/adminlogin" method="POST" id="admin-form" name="admin-form">
+            <div class="admin">
+                <h4 class="mb-4 text-center">Admin </h4>
+                <h5 style="color: brown;">{{ error }}</h5>
+
+                <div class="admin-user-input my-5">
+                    <label for="inp" class="inp">
+                        <input type="text" id="register-firstname" name="admin-username" placeholder="&nbsp;" oninput="this.className = ''"
+                            >
+                        <span class="label">Username</span>
+                        <span class="focus-bg"></span>
+                    </label>
+                    <label for="inp" class="inp">
+                        <input type="password" name="admin-password" id="register-firstname" placeholder="&nbsp;"
+                            oninput="this.className = ''" >
+                        <span class="label">Password</span>
+                        <span class="focus-bg"></span>
+                    </label>
+                </div>
+
+
+
+                <div class="Button-style text-center mt-4"> <a href='/adminlogin' type="submit" class="hvr-radial-out">
+                     <button type="submit" class="btn" style="background-color: transparent;border-color: rgba(204, 204, 204, 0);color: white;">
+                        Log In</button> </a>
+
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Main Section  -->
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/static/css/adminpanel.css">
+  <link rel="stylesheet" href="/static/css/regi.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="sidebar">
+      <div class="bg_shadow"></div>
+      <div class="sidebar_inner">
+        <div class="close m-2">
+          <i class="fas fa-times"></i>
+        </div>
+
+        <ul class="siderbar_menu mx-2">
+          <div>
+            <h5 class="text-white text-center my-5"> Admin </h5>
+          </div>
+
+          <!-- Create User Button -->
+          <div class="Button-user text-center mt-5"> <a href='#'> Create User </a> </div>
+
+          <!-- Delete User Button -->
+          <div class="Button-user text-center mt-5"> <a href='/adminlogout'> Logout </a> </div>
+
+
+        </ul>
+
+      </div>
+    </div>
+    <div class="main_container">
+      <div class="navbar">
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo">
+          <img
+            src="https://2.bp.blogspot.com/-A3aCL6_CaRU/XN1BPYfeUNI/AAAAAAAAAm0/QCmNCzFQAGEds4lKlPHFB0bVXUv-OTD0wCLcBGAs/s1600/NYKS.jpg"
+            alt="logo" width="65" height="45"></a>
+        </div>
+      </div>
+      <div class="content">
+        <center><h4> Voice Recognization Attendance System</h4></center>
+      </div>
+    </div>
+
+
+  </div>
+  <div style="margin-left: 20%;">
+    <form id="addemp" action="/addemp" method="POST" autocomplete="off" name="addemp">
+      <center><h5>Add User</h5></center>
+      <center><h5>{{ msg }}</h5></center>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group form-step1">
+            <label for="inp" class="inp">
+              <input type="text" id="register-firstname" placeholder="&nbsp;" 
+                name="register-firstname"required>
+              <span class="label">First Name</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group form-step1">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;"  name="register-lastname" required>
+              <span class="label">Last Name</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group form-step1">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;"  name="register-phone" required>
+              <span class="label">Phone Number</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group form-step1">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="register-email" required>
+              <span class="label">Email</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group form-step1">
+            <label for="inp" class="inp">
+              <input type="password" id="inp" placeholder="&nbsp;" name="register-password" required>
+              <span class="label">password</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group form-step1">
+            <label for="inp" class="inp">
+              <input type="date" id="inp" placeholder="&nbsp;" name="register-dob" required>
+              <span class="label">Date Of Birth</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="register-address" required>
+              <span class="label">Address line1</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="register-pincode" required>
+              <span class="label">Pincode</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="register-city" required>
+              <span class="label">City</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="register-state" required>
+              <span class="label">State</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="register-longitude" required>
+              <span class="label">Longitude</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="inp" class="inp">
+              <input type="text" id="inp" placeholder="&nbsp;" name="register-lattitude" required>
+              <span class="label">Lattitude</span>
+              <span class="focus-bg"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          
+        </div>
+        <div class="col-sm-6">
+          <button type="submit" class="btn btn-success">Add User</button>
+        </div>
+
+      </div>
+    </form>
+
+
+  </div>
+
+
+
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <!-- Custom Js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(".siderbar_menu li").click(function () {
+      $(".siderbar_menu li").removeClass("active");
+      $(this).addClass("active");
+    });
+
+    $(".hamburger").click(function () {
+      $(".wrapper").addClass("active");
+    });
+
+    $(".close, .bg_shadow").click(function () {
+      $(".wrapper").removeClass("active");
+    });
+  </script>
+
+</body>
+
+</html>
